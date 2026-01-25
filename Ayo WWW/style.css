@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-main: #2b231b;
+    --bg-panel: #3a3026;
+    --gold: #d6b36a;
+    --gold-soft: #e6c98a;
+    --text-main: #f5efe6;
+    --text-muted: #cbbfae;
+    --border-soft: rgba(214,179,106,0.25);
+}
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: radial-gradient(circle at top, #3a3026, var(--bg-main));
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.4rem;
+    color: var(--gold);
+}
+
+.logo img {
+    height: 52px;
+}
+
+.lang-switch button {
+    background: transparent;
+    border: 1px solid var(--border-soft);
+    color: var(--gold-soft);
+    padding: 6px 10px;
+    margin-left: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.lang-switch button:hover {
+    background: rgba(214,179,106,0.15);
+    color: var(--gold);
+}
+
+main {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section[data-lang] {
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: var(--gold);
+}
+
+p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* === TOOL CARD === */
+.tool {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0.05),
+        rgba(0,0,0,0.3)
+    );
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 26px 30px;
+    margin-top: 28px;
+}
+
+.tool-content {
+    flex: 1;
+}
+
+.tool h2 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.tool-content div[data-lang] {
+    margin-bottom: 14px;
+    color: var(--text-muted);
+}
+
+.tool a {
+    color: var(--gold-soft);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tool a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* === LOGO PO PRAWEJ === */
+.tool-logo-wrapper {
+    flex-shrink: 0;
+}
+
+.tool-logo-wrapper img {
+    max-height: 96px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+}
+
+footer {
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 60px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-soft);
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ayo Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/logo/Ayo.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="assets/logo/Ayo.png" alt="Ayo logo">
+        Ayo Tools
+    </div>
+
+    <nav class="lang-switch">
+        <button onclick="setLang('pl')">Polski</button>
+        <button onclick="setLang('en')">English</button>
+        <button onclick="setLang('ua')">Українська</button>
+        <button onclick="setLang('lv')">Latviešu</button>
+        <button onclick="setLang('lt')">Lietuvių</button>
+        <button onclick="setLang('ee')">Eesti</button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- INTRO -->
+    <section data-lang="pl">
+        <h1>Ayo Tools</h1>
+        <p>
+            Ayo Tools to rozwijany zestaw lekkich, desktopowych narzędzi do pracy z obrazem.
+            Aplikacje są projektowane z myślą o prostocie, stabilności i pełnej kompatybilności
+            z każdą dystrybucją systemu Linux.
+        </p>
+        <p>
+            Projekt jest aktywnie rozwijany, a kolejne narzędzia oraz funkcje są planowane.
+            Wszystkie aplikacje wspierają wiele języków i mogą być używane w środowiskach
+            profesjonalnych oraz domowych.
+        </p>
+        <p>
+            Obsługiwane języki: Polski, English, Українська, Latviešu, Lietuvių, Eesti.
+        </p>
+    </section>
+
+    <section data-lang="en">
+        <h1>Ayo Tools</h1>
+        <p>
+            Ayo Tools is a growing collection of lightweight desktop applications for image processing.
+            The tools are designed to be simple, stable and fully compatible with any Linux distribution.
+        </p>
+        <p>
+            The project is under active development, with new tools and features planned.
+            All applications support multiple languages and are suitable for both professional
+            and home use.
+        </p>
+        <p>
+            Supported languages: Polish, English, Ukrainian, Latvian, Lithuanian, Estonian.
+        </p>
+    </section>
+
+    <section data-lang="ua">
+        <h1>Ayo Tools</h1>
+        <p>
+            Ayo Tools — це набір легких настільних інструментів для роботи з зображеннями,
+            розроблених для будь-якого дистрибутива Linux.
+        </p>
+        <p>
+            Проєкт активно розвивається, плануються нові інструменти та функції.
+            Усі програми підтримують кілька мов.
+        </p>
+        <p>
+            Підтримувані мови: Польська, Англійська, Українська, Латиська, Литовська, Естонська.
+        </p>
+    </section>
+
+    <section data-lang="lv">
+        <h1>Ayo Tools</h1>
+        <p>
+            Ayo Tools ir vieglu darbvirsmas rīku kopums darbam ar attēliem,
+            kas paredzēts jebkurai Linux distribūcijai.
+        </p>
+        <p>
+            Projekts tiek aktīvi attīstīts, un ir plānoti jauni rīki un funkcijas.
+            Visas lietotnes atbalsta vairākas valodas.
+        </p>
+        <p>
+            Atbalstītās valodas: Poļu, Angļu, Ukraiņu, Latviešu, Lietuviešu, Igauņu.
+        </p>
+    </section>
+
+    <section data-lang="lt">
+        <h1>Ayo Tools</h1>
+        <p>
+            Ayo Tools – tai lengvų darbalaukio įrankių rinkinys vaizdų apdorojimui,
+            veikiantis bet kurioje Linux distribucijoje.
+        </p>
+        <p>
+            Projektas aktyviai vystomas, planuojami nauji įrankiai ir funkcijos.
+            Visos programos palaiko kelias kalbas.
+        </p>
+        <p>
+            Palaikomos kalbos: Lenkų, Anglų, Ukrainiečių, Latvių, Lietuvių, Estų.
+        </p>
+    </section>
+
+    <section data-lang="ee">
+        <h1>Ayo Tools</h1>
+        <p>
+            Ayo Tools on kergete töölauatööriistade kogum piltidega töötamiseks,
+            mis töötab igas Linuxi distributsioonis.
+        </p>
+        <p>
+            Projekt on aktiivses arenduses ning uusi tööriistu ja funktsioone on plaanis lisada.
+            Kõik rakendused toetavad mitut keelt.
+        </p>
+        <p>
+            Toetatud keeled: Poola, Inglise, Ukraina, Läti, Leedu, Eesti.
+        </p>
+    </section>
+
+    <!-- AYO UP -->
+    <section class="tool">
+        <div class="tool-content">
+            <h2>Ayo UP</h2>
+
+            <div data-lang="pl">
+                Narzędzie do powiększania obrazów przy użyciu sieci neuronowych.
+                Ayo UP pozwala na szybkie skalowanie grafiki bez utraty jakości
+                i działa na każdej dystrybucji Linuxa.
+            </div>
+
+            <div data-lang="en">
+                Neural network powered image upscaling tool.
+                Ayo UP allows fast image scaling with high quality on any Linux distribution.
+            </div>
+
+            <a href="https://github.com/Klucznik26/Ayo-UP"
+               target="_blank"
+               onclick="countClick('ayo-up')">
+                GitHub – Ayo UP
+            </a>
+
+            <p>Kliknięcia: <span id="count-ayo-up">0</span></p>
+        </div>
+
+        <div class="tool-logo-wrapper">
+            <img src="assets/logo/Up.png" alt="Ayo UP logo">
+        </div>
+    </section>
+
+    <!-- AYO CONVERT -->
+    <section class="tool">
+        <div class="tool-content">
+            <h2>Ayo CONVERT</h2>
+
+            <div data-lang="pl">
+                Szybkie narzędzie do konwersji formatów graficznych.
+                Umożliwia łatwą pracę z plikami graficznymi i jest w pełni kompatybilne
+                z każdą dystrybucją Linuxa.
+            </div>
+
+            <div data-lang="en">
+                Fast image format conversion tool.
+                Designed for efficient graphic workflow and full Linux compatibility.
+            </div>
+
+            <a href="https://github.com/Klucznik26/AyoCONVERT"
+               target="_blank"
+               onclick="countClick('ayo-convert')">
+                GitHub – Ayo CONVERT
+            </a>
+
+            <p>Kliknięcia: <span id="count-ayo-convert">0</span></p>
+        </div>
+
+        <div class="tool-logo-wrapper">
+            <img src="assets/logo/Convert.png" alt="Ayo CONVERT logo">
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        © Ayo Tools · Linux-first · Open Source · Actively developed ·
+        Odwiedziny: <span id="page-counter">0</span>
+    </p>
+</footer>
+
+<script>
+function setLang(lang) {
+    localStorage.setItem('ayo-lang', lang);
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+    });
+}
+
+function updateCounter(name, elementId) {
+    fetch(`https://api.countapi.xyz/get/ayo/${name}`)
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById(elementId).textContent = data.value;
+        });
+}
+
+function countClick(name) {
+    fetch(`https://api.countapi.xyz/hit/ayo/${name}`)
+        .then(() => updateCounter(name, `count-${name}`));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lang = localStorage.getItem('ayo-lang') || 'pl';
+    setLang(lang);
+
+    fetch('https://api.countapi.xyz/hit/ayo/page')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('page-counter').textContent = data.value;
+        });
+
+    updateCounter('ayo-up', 'count-ayo-up');
+    updateCounter('ayo-convert', 'count-ayo-convert');
+});
+</script>
+
+</body>
+</html>
