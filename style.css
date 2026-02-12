@@ -39,6 +39,11 @@ header {
 
 .logo img {
     height: 52px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(2);
 }
 
 .lang-switch button {
@@ -50,11 +55,13 @@ header {
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.85rem;
+    transition: transform 0.3s ease;
 }
 
 .lang-switch button:hover {
     background: rgba(214,179,106,0.15);
     color: var(--gold);
+    transform: scale(1.5);
 }
 
 main {
@@ -140,4 +147,13 @@ footer {
     color: var(--text-muted);
     font-size: 0.85rem;
     border-top: 1px solid var(--border-soft);
+}
+
+.last-update {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.5;
 }
