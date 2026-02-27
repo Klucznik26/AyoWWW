@@ -19,18 +19,25 @@
     </div>
 
     <nav class="lang-switch">
-        <button onclick="setLang('pl')">Polski</button>
-        <button onclick="setLang('en')">English</button>
-        <button onclick="setLang('ua')">Українська</button>
-        <button onclick="setLang('lv')">Latviešu</button>
-        <button onclick="setLang('lt')">Lietuvių</button>
-        <button onclick="setLang('ee')">Eesti</button>
-        <button onclick="setLang('pt')">Português</button>
-        <button onclick="setLang('cs')">Čeština</button>
-        <button onclick="setLang('sl')">Slovenščina</button>
-        <button onclick="setLang('ka')">ქართული</button>
-        <button onclick="setLang('es')">Español</button>
-        <button onclick="setLang('ro')">Română</button>
+        <div>
+            <button onclick="setLang('cs')">Čeština</button>
+            <button onclick="setLang('ee')">Eesti</button>
+            <button onclick="setLang('en')">English</button>
+            <button onclick="setLang('es')">Español</button>
+            <button onclick="setLang('fr')">Français</button>
+            <button onclick="setLang('it')">Italiano</button>
+            <button onclick="setLang('lv')">Latviešu</button>
+            <button onclick="setLang('lt')">Lietuvių</button>
+        </div>
+        <div style="margin-top: 5px;">
+            <button onclick="setLang('pl')">Polski</button>
+            <button onclick="setLang('pt')">Português</button>
+            <button onclick="setLang('ro')">Română</button>
+            <button onclick="setLang('sl')">Slovenščina</button>
+            <button onclick="setLang('el')">Ελληνικά</button>
+            <button onclick="setLang('ua')">Українська</button>
+            <button onclick="setLang('ka')">ქართული</button>
+        </div>
     </nav>
 </header>
 
@@ -50,7 +57,7 @@
             profesjonalnych oraz domowych.
         </p>
         <p>
-            Obsługiwane języki: Polski, English, Українська, Čeština, Latviešu, Lietuvių, Eesti, Português, Slovenščina, ქართული, Español, Română.
+            Obsługiwane języki: Čeština, Eesti, English, Español, Français, Italiano, Latviešu, Lietuvių, Polski, Português, Română, Slovenščina, Ελληνικά, Українська, ქართული.
         </p>
     </section>
 
@@ -66,7 +73,7 @@
             and home use.
         </p>
         <p>
-            Supported languages: Polish, English, Ukrainian, Czech, Latvian, Lithuanian, Estonian, Portuguese, Slovenian, Georgian, Spanish, Romanian.
+            Supported languages: Czech, English, Estonian, French, Georgian, Greek, Italian, Latvian, Lithuanian, Polish, Portuguese, Romanian, Slovenian, Spanish, Ukrainian.
         </p>
     </section>
 
@@ -224,6 +231,53 @@
         </p>
     </section>
 
+    <section data-lang="fr">
+        <h1>Ayo Tools</h1>
+        <p>
+            Ayo Tools est une collection croissante d'outils de bureau légers pour le traitement d'images.
+            Les applications sont conçues pour être simples, stables et entièrement compatibles
+            avec n'importe quelle distribution Linux.
+        </p>
+        <p>
+            Le projet est en développement actif, avec de nouveaux outils et fonctionnalités prévus.
+            Toutes les applications prennent en charge plusieurs langues.
+        </p>
+        <p>
+            Langues prises en charge : Polonais, Anglais, Ukrainien, Tchèque, Letton, Lituanien, Estonien, Portugais, Slovène, Géorgien, Espagnol, Roumain, Français, Italien, Grec.
+        </p>
+    </section>
+
+    <section data-lang="it">
+        <h1>Ayo Tools</h1>
+        <p>
+            Ayo Tools è una raccolta crescente di strumenti desktop leggeri per l'elaborazione delle immagini.
+            Le applicazioni sono progettate per essere semplici, stabili e completamente compatibili
+            con qualsiasi distribuzione Linux.
+        </p>
+        <p>
+            Il progetto è in fase di sviluppo attivo, con nuovi strumenti e funzionalità pianificati.
+            Tutte le applicazioni supportano più lingue.
+        </p>
+        <p>
+            Lingue supportate: Polacco, Inglese, Ucraino, Ceco, Lettone, Lituano, Estone, Portoghese, Sloveno, Georgiano, Spagnolo, Rumeno, Francese, Italiano, Greco.
+        </p>
+    </section>
+
+    <section data-lang="el">
+        <h1>Ayo Tools</h1>
+        <p>
+            Το Ayo Tools είναι μια αυξανόμενη συλλογή ελαφρών εργαλείων επιφάνειας εργασίας για επεξεργασία εικόνας.
+            Οι εφαρμογές έχουν σχεδιαστεί για να είναι απλές, σταθερές και πλήρως συμβατές με οποιαδήποτε διανομή Linux.
+        </p>
+        <p>
+            Το έργο βρίσκεται υπό ενεργή ανάπτυξη, με νέα εργαλεία και λειτουργίες να σχεδιάζονται.
+            Όλες οι εφαρμογές υποστηρίζουν πολλές γλώσσες.
+        </p>
+        <p>
+            Υποστηριζόμενες γλώσσες: Πολωνικά, Αγγλικά, Ουκρανικά, Τσεχικά, Λετονικά, Λιθουανικά, Εσθονικά, Πορτογαλικά, Σλοβενικά, Γεωργιανά, Ισπανικά, Ρουμανικά, Γαλλικά, Ιταλικά, Ελληνικά.
+        </p>
+    </section>
+
     <!-- AYO UP -->
     <section class="tool">
         <div class="tool-content">
@@ -233,73 +287,91 @@
                 Narzędzie do powiększania obrazów przy użyciu sieci neuronowych.
                 Ayo UP pozwala na szybkie skalowanie grafiki bez utraty jakości
                 i działa na każdej dystrybucji Linuxa.
-                Zaktualizowano do wersji 1.1.0 – dodano obsługę wielu plików jednocześnie.
+                Zaktualizowano do wersji 1.3.0 – dodano obsługę własnych upscalerów.
             </div>
 
             <div data-lang="en">
                 Neural network powered image upscaling tool.
                 Ayo UP allows fast image scaling with high quality on any Linux distribution.
-                Updated to version 1.1.0 – added batch file processing.
+                Updated to version 1.3.0 – added support for custom upscalers.
             </div>
 
             <div data-lang="ua">
                 Інструмент для збільшення зображень за допомогою нейронних мереж.
                 Ayo UP дозволяє швидко масштабувати графіку без втрати якості та працює на будь-якому дистрибутиві Linux.
-                Оновлено до версії 1.1.0 – додано можливість обробки кількох файлів одночасно.
+                Оновлено до версії 1.3.0 – додано підтримку власних апскейлерів.
             </div>
 
             <div data-lang="cs">
                 Nástroj pro zvětšování obrázků pomocí neuronových sítí.
                 Ayo UP umožňuje rychlé škálování grafiky bez ztráty kvality a funguje na každé distribuci Linuxu.
-                Aktualizováno na verzi 1.1.0 – přidána podpora pro více souborů najednou.
+                Aktualizováno na verzi 1.3.0 – přidána podpora vlastních upscalerů.
             </div>
 
             <div data-lang="lv">
                 Attēlu mērogošanas rīks, izmantojot neironu tīklus.
                 Ayo UP ļauj ātri mērogot grafiku bez kvalitātes zuduma un darbojas jebkurā Linux distribūcijā.
-                Atjaunināts uz versiju 1.1.0 – pievienota vairāku failu apstrāde vienlaikus.
+                Atjaunināts uz versiju 1.3.0 – pievienots atbalsts pielāgotiem mērogotājiem.
             </div>
 
             <div data-lang="lt">
                 Vaizdų didinimo įrankis naudojant neuroninius tinklus.
                 Ayo UP leidžia greitai keisti grafikos mastelį neprarandant kokybės ir veikia bet kurioje Linux distribucijoje.
-                Atnaujinta į 1.1.0 versiją – pridėta galimybė apdoroti kelis failus vienu metu.
+                Atnaujinta į 1.3.0 versiją – pridėtas pasirinktinių didinimo įrankių palaikymas.
             </div>
 
             <div data-lang="ee">
                 Piltide suurendamise tööriist närvivõrkude abil.
                 Ayo UP võimaldab graafikat kiiresti skaleerida ilma kvaliteeti kaotamata ja töötab igas Linuxi distributsioonis.
-                Uuendatud versioonile 1.1.0 – lisatud mitme faili korraga töötlemise võimalus.
+                Uuendatud versioonile 1.3.0 – lisatud kohandatud suurendajate tugi.
             </div>
 
             <div data-lang="pt">
                 Ferramenta de upscaling de imagem baseada em redes neurais.
                 O Ayo UP permite o redimensionamento rápido de imagens com alta qualidade em qualquer distribuição Linux.
-                Atualizado para a versão 1.1.0 – adicionado processamento de vários arquivos de uma vez.
+                Atualizado para a versão 1.3.0 – adicionado suporte para upscalers personalizados.
             </div>
 
             <div data-lang="sl">
                 Orodje za povečavo slik s pomočjo nevronskih mrež.
                 Ayo UP omogoča hitro spreminjanje velikosti grafik brez izgube kakovosti in deluje na vsaki distribuciji Linuxa.
-                Posodobljeno na različico 1.1.0 – dodana podpora za več datotek hkrati.
+                Posodobljeno na različico 1.3.0 – dodana podpora za upscalerje po meri.
             </div>
 
             <div data-lang="ka">
                 სურათების გადიდების ინსტრუმენტი ნეირონული ქსელების გამოყენებით.
                 Ayo UP საშუალებას იძლევა სწრაფად შეიცვალოს გრაფიკის ზომა ხარისხის დაკარგვის გარეშე და მუშაობს Linux-ის ნებისმიერ დისტრიბუციაზე.
-                განახლებულია 1.1.0 ვერსიამდე – დაემატა რამდენიმე ფაილის ერთდროულად დამუშავების შესაძლებლობა.
+                განახლებულია 1.3.0 ვერსიამდე – დაემატა მომხმარებლის მიერ დამატებული აფსკეილერების მხარდაჭერა.
             </div>
 
             <div data-lang="es">
                 Herramienta para ampliar imágenes utilizando redes neuronales.
                 Ayo UP permite escalar gráficos rápidamente sin perder calidad y funciona en cualquier distribución de Linux.
-                Actualizado a la versión 1.1.0 – se añadió soporte para múltiples archivos simultáneamente.
+                Actualizado a la versión 1.3.0 – se añadió soporte para upscalers personalizados.
             </div>
 
             <div data-lang="ro">
                 Instrument pentru mărirea imaginilor folosind rețele neuronale.
                 Ayo UP permite scalarea rapidă a graficii fără pierderea calității și funcționează pe orice distribuție Linux.
-                Actualizat la versiunea 1.1.0 – s-a adăugat suport pentru mai multe fișiere simultan.
+                Actualizat la versiunea 1.3.0 – s-a adăugat suport pentru upscalere personalizate.
+            </div>
+
+            <div data-lang="fr">
+                Outil d'agrandissement d'image utilisant des réseaux de neurones.
+                Ayo UP permet une mise à l'échelle rapide sans perte de qualité et fonctionne sur n'importe quelle distribution Linux.
+                Mis à jour vers la version 1.3.0 – ajout de la prise en charge des upscalers personnalisés.
+            </div>
+
+            <div data-lang="it">
+                Strumento di upscaling delle immagini basato su reti neurali.
+                Ayo UP consente un ridimensionamento rapido senza perdita di qualità e funziona su qualsiasi distribuzione Linux.
+                Aggiornato alla versione 1.3.0 – aggiunto il supporto per upscaler personalizzati.
+            </div>
+
+            <div data-lang="el">
+                Εργαλείο αναβάθμισης εικόνας με χρήση νευρωνικών δικτύων.
+                Το Ayo UP επιτρέπει γρήγορη κλιμάκωση χωρίς απώλεια ποιότητας και λειτουργεί σε οποιαδήποτε διανομή Linux.
+                Ενημερώθηκε στην έκδοση 1.3.0 – προστέθηκε υποστήριξη για προσαρμοσμένα upscalers.
             </div>
 
             <a href="https://github.com/Klucznik26/Ayo-UP"
@@ -394,6 +466,21 @@
                 Actualizat la versiunea 1.1.0 – adăugate limbile: georgiană, portugheză, cehă, slovenă. S-a adăugat suport pentru mai multe fișiere simultan și s-a îmbunătățit interfața.
             </div>
 
+            <div data-lang="fr">
+                Outil rapide de conversion de formats graphiques.
+                Permet de travailler facilement avec des fichiers graphiques et est entièrement compatible avec n'importe quelle distribution Linux.
+            </div>
+
+            <div data-lang="it">
+                Strumento veloce per la conversione di formati grafici.
+                Consente di lavorare facilmente con file grafici ed è completamente compatibile con qualsiasi distribuzione Linux.
+            </div>
+
+            <div data-lang="el">
+                Γρήγορο εργαλείο μετατροπής μορφών γραφικών.
+                Επιτρέπει την εύκολη εργασία με αρχεία γραφικών και είναι πλήρως συμβατό με οποιαδήποτε διανομή Linux.
+            </div>
+
             <a href="https://github.com/Klucznik26/AyoCONVERT"
                target="_blank"
                rel="noopener noreferrer">
@@ -485,6 +572,24 @@
                 Suportă o gamă largă de formate: .png, .jpg, .jpeg, .bmp, .gif, .tiff, .tif, .ico, .webp.
             </div>
 
+            <div data-lang="fr">
+                Ayo Arch Visionneuse d'images légère et rapide directement depuis les archives ZIP.
+                Permet un aperçu instantané des graphiques sans les décompresser (Stratégie Zero-Temp).
+                Prend en charge une large gamme de formats : .png, .jpg, .jpeg, .bmp, .gif, .tiff, .tif, .ico, .webp.
+            </div>
+
+            <div data-lang="it">
+                Ayo Arch Visualizzatore di immagini leggero e veloce direttamente dagli archivi ZIP.
+                Consente l'anteprima istantanea della grafica senza decomprimerla (Strategia Zero-Temp).
+                Supporta un'ampia gamma di formati: .png, .jpg, .jpeg, .bmp, .gif, .tiff, .tif, .ico, .webp.
+            </div>
+
+            <div data-lang="el">
+                Ayo Arch Ελαφρύ και γρήγορο πρόγραμμα προβολής εικόνων απευθείας από αρχεία ZIP.
+                Επιτρέπει την άμεση προεπισκόπηση γραφικών χωρίς αποσυμπίεση (Στρατηγική Zero-Temp).
+                Υποστηρίζει ένα ευρύ φάσμα μορφών: .png, .jpg, .jpeg, .bmp, .gif, .tiff, .tif, .ico, .webp.
+            </div>
+
             <a href="https://github.com/Klucznik26/AyoARCH"
                target="_blank"
                rel="noopener noreferrer">
@@ -539,6 +644,15 @@
             </div>
             <div data-lang="ro">
                 Program care ajută la sortarea fișierelor grafice în 3 categorii cu o interfață intuitivă și simplă.
+            </div>
+            <div data-lang="fr">
+                Programme aidant au tri des fichiers graphiques en 3 catégories avec une interface intuitive et simple.
+            </div>
+            <div data-lang="it">
+                Programma che aiuta a ordinare i file grafici in 3 categorie con un'interfaccia intuitiva e semplice.
+            </div>
+            <div data-lang="el">
+                Πρόγραμμα που βοηθά στην ταξινόμηση αρχείων γραφικών σε 3 κατηγορίες με διαισθητική και απλή διεπαφή.
             </div>
 
             <a href="https://github.com/Klucznik26/AyoSORT"
