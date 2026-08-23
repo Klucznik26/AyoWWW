@@ -173,11 +173,11 @@ p {
     text-align: center;
 }
 
-/* All visible icon artwork is normalized to the same 96 px height.
-   The top edge stays fixed; width may vary to preserve proportions. */
+/* All downloadable icons use exactly the same rendered height.
+   Width follows the original aspect ratio and is secondary. */
 .icon-card > a {
     width: 140px;
-    height: 116px;
+    height: 100px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -189,27 +189,6 @@ p {
     max-width: none;
     object-fit: contain;
     display: block;
-    transform-origin: top center;
-}
-
-.icon-card img[src$="ayoup.png"] {
-    transform: scale(1.053);
-}
-
-.icon-card img[src$="ayoconvert.png"] {
-    transform: scale(1.0742);
-}
-
-.icon-card img[src$="ayoarch.png"] {
-    transform: scale(0.9796);
-}
-
-.icon-card img[src$="ayosort.png"] {
-    transform: scale(1.1572);
-}
-
-.icon-card img[src$="ayofolder.png"] {
-    transform: scale(1.2216);
 }
 
 .icon-card p {
