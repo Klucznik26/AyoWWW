@@ -13,10 +13,12 @@
     mix-blend-mode: screen;
 }
 
-.site-header,
+/* Keep normal page content above the fixed eyes, but do not override the
+   sticky header's higher z-index from style.css. The previous rule put
+   header and main in the same stacking layer, so transparent main content
+   sat over the opened language menu and intercepted real mouse clicks. */
 main,
-footer,
-.feedback-modal {
+footer {
     position: relative;
     z-index: 1;
 }
