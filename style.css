@@ -173,9 +173,8 @@ p {
     text-align: center;
 }
 
-/* Every icon starts on exactly the same top line. The source PNGs contain
-   different transparent margins, so each file is uniformly scaled until
-   the visible artwork has the same pixel height. Width is allowed to vary. */
+/* All visible icon artwork is normalized to the same 96 px height.
+   The top edge stays fixed; width may vary to preserve proportions. */
 .icon-card > a {
     width: 140px;
     height: 116px;
@@ -198,19 +197,19 @@ p {
 }
 
 .icon-card img[src$="ayoconvert.png"] {
-    transform: scale(1.063);
+    transform: scale(1.0742);
 }
 
 .icon-card img[src$="ayoarch.png"] {
-    transform: scale(1.000);
+    transform: scale(0.9796);
 }
 
 .icon-card img[src$="ayosort.png"] {
-    transform: scale(1.121);
+    transform: scale(1.1572);
 }
 
 .icon-card img[src$="ayofolder.png"] {
-    transform: scale(1.158);
+    transform: scale(1.2216);
 }
 
 .icon-card p {
