@@ -175,9 +175,9 @@ p {
 
 .icon-card > a {
     width: 110px;
-    height: 100px;
+    height: 108px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -187,6 +187,30 @@ p {
     max-width: 110px;
     object-fit: contain;
     display: block;
+    transform-origin: top center;
+}
+
+/* The source PNGs have slightly different transparent bottom margins.
+   Normalize the visible artwork so both the top and bottom edges form
+   straight horizontal lines without changing the row layout. */
+.icon-card img[src$="ayoup.png"] {
+    transform: scaleY(1.021);
+}
+
+.icon-card img[src$="ayoconvert.png"] {
+    transform: scaleY(1.031);
+}
+
+.icon-card img[src$="ayoarch.png"] {
+    transform: scaleY(1);
+}
+
+.icon-card img[src$="ayosort.png"] {
+    transform: scaleY(1.053);
+}
+
+.icon-card img[src$="ayofolder.png"] {
+    transform: scaleY(1.076);
 }
 
 .icon-card p {
