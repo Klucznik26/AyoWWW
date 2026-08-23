@@ -164,5 +164,96 @@
 <script src="site-core.js?v=20260823-6"></script>
 <script src="feedback-i18n.js?v=20260823-1"></script>
 <script src="feedback-submit-formspree.js?v=20260823-1"></script>
+<script>
+(() => {
+    function applyLanguageDirect(code, button) {
+        const all = window.AYO_I18N || {};
+        const t = all[code] || all.en || all.pl;
+        if (!t) return;
+
+        const langButton = button || document.querySelector(`.flag-button[data-lang="${code}"]`);
+        const flag = langButton?.textContent || document.getElementById('current-flag')?.textContent || '🌐';
+        const langName = langButton?.title || code;
+
+        document.documentElement.lang = code;
+        try { localStorage.setItem('ayo-lang', code); } catch (_) {}
+
+        const currentFlag = document.getElementById('current-flag');
+        if (currentFlag) currentFlag.textContent = flag;
+
+        const toggle = document.getElementById('language-toggle');
+        if (toggle) {
+            const label = t.languageMenu || langName;
+            toggle.title = `${label}: ${langName}`;
+            toggle.setAttribute('aria-label', `${label}: ${langName}`);
+        }
+
+        const setText = (id, value) => {
+            const node = document.getElementById(id);
+            if (node && value != null) node.textContent = value;
+        };
+        setText('intro-text', t.intro);
+        setText('projects-title', t.projects);
+        setText('icons-title', t.icons);
+        setText('updated-text', t.updated);
+
+        try {
+            if (typeof APPS !== 'undefined' && typeof projectCard === 'function') {
+                const grid = document.getElementById('project-grid');
+                if (grid) grid.innerHTML = APPS.map(app => projectCard(app, t)).join('');
+            }
+        } catch (error) {
+            console.error('Ayo card translation error:', error);
+        }
+
+        document.querySelectorAll('.flag-button').forEach(item => {
+            const active = item.dataset.lang === code;
+            item.classList.toggle('active', active);
+            item.setAttribute('aria-current', active ? 'true' : 'false');
+        });
+
+        const feedback = (window.AYO_FEEDBACK_UI || {})[code] || (window.AYO_FEEDBACK_UI || {}).en;
+        if (feedback) {
+            setText('header-feedback-label', feedback.button);
+            const footerButton = document.querySelector('.footer-feedback');
+            if (footerButton) footerButton.textContent = feedback.button;
+            setText('feedback-title', feedback.title);
+            setText('feedback-intro', feedback.intro);
+            setText('feedback-program-label', feedback.program);
+            setText('feedback-type-label', feedback.type);
+            setText('feedback-message-label', feedback.message);
+            setText('feedback-submit', feedback.send || feedback.button);
+            const type = document.getElementById('feedback-type');
+            if (type?.options?.length >= 4) {
+                type.options[0].textContent = feedback.bug;
+                type.options[1].textContent = feedback.suggestion;
+                type.options[2].textContent = feedback.question;
+                type.options[3].textContent = feedback.other;
+            }
+        }
+
+        const panel = document.getElementById('language-panel');
+        if (panel) panel.hidden = true;
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        document.title = `Ayo Ecosystem — ${t.projects || langName}`;
+    }
+
+    document.addEventListener('click', event => {
+        const button = event.target.closest?.('.flag-button');
+        if (!button) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        applyLanguageDirect(button.dataset.lang, button);
+    }, true);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const requested = new URLSearchParams(location.search).get('lang');
+        let saved = null;
+        try { saved = localStorage.getItem('ayo-lang'); } catch (_) {}
+        const code = requested || saved;
+        if (code && (window.AYO_I18N || {})[code]) applyLanguageDirect(code);
+    });
+})();
+</script>
 </body>
 </html>
