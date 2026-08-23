@@ -195,3 +195,25 @@ p {
 .icon-card p {
     margin-top: 10px;
 }
+
+
+/* FINAL ICON ROW ALIGNMENT 20260823-1330 */
+.icon-card > a {
+    height: 108px;
+    align-items: flex-start;
+}
+
+.icon-card img {
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    display: block;
+}
+
+/* Measured from the actual rendered original artwork.
+   Each visible icon is normalized to the same 99 px visual height. */
+.icon-card:nth-child(1) img { height: 102.062px; }
+.icon-card:nth-child(2) img { height: 103.125px; }
+.icon-card:nth-child(3) img { height: 100px; }
+.icon-card:nth-child(4) img { height: 105.319px; }
+.icon-card:nth-child(5) img { height: 107.609px; }
