@@ -123,10 +123,10 @@
         <span class="feedback-kicker">Ayo Feedback</span>
         <h2 id="feedback-title">Zgłoś uwagę</h2>
         <p id="feedback-intro">Znalazłeś błąd, masz pomysł albo pytanie? Opisz je tutaj.</p>
-        <p id="feedback-note" class="feedback-note" hidden></p>
+        <p id="feedback-note" class="feedback-note">Zgłoszenie otworzy się jako nowe GitHub Issue. Adres e-mail autora strony nie jest publikowany ani wpisywany w formularzu.</p>
 
         <form id="feedback-form" novalidate>
-            <input id="feedback-website" class="feedback-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input id="feedback-website" class="feedback-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <label>
                 <span id="feedback-program-label">Program</span>
@@ -150,7 +150,7 @@
 
             <div class="feedback-form-footer">
                 <span id="feedback-status" class="feedback-status" role="status" aria-live="polite"></span>
-                <button id="feedback-submit" class="feedback-submit" type="submit">Wyślij</button>
+                <button id="feedback-submit" class="feedback-submit" type="submit">Przejdź do wysłania</button>
             </div>
         </form>
     </section>
@@ -161,9 +161,8 @@
 <script src="i18n-3.js?v=20260823-2"></script>
 <script src="i18n-4.js?v=20260823-2"></script>
 <script src="i18n-5.js?v=20260823-2"></script>
-<script src="site-core.js?v=20260823-5"></script>
+<script src="site-core.js?v=20260823-6"></script>
 <script src="feedback-i18n.js?v=20260823-1"></script>
-<script src="feedback-direct.js?v=20260823-1"></script>
-<script src="language-hard-nav.js?v=20260823-1"></script>
+<script src="feedback-submit-formspree.js?v=20260823-1"></script>
 </body>
 </html>
