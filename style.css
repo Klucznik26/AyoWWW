@@ -173,9 +173,12 @@ p {
     text-align: center;
 }
 
+/* Every icon starts on exactly the same top line. The source PNGs contain
+   different transparent margins, so each file is uniformly scaled until
+   the visible artwork has the same pixel height. Width is allowed to vary. */
 .icon-card > a {
-    width: 110px;
-    height: 108px;
+    width: 140px;
+    height: 116px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -184,33 +187,30 @@ p {
 .icon-card img {
     height: 100px;
     width: auto;
-    max-width: 110px;
+    max-width: none;
     object-fit: contain;
     display: block;
     transform-origin: top center;
 }
 
-/* The source PNGs have slightly different transparent bottom margins.
-   Normalize the visible artwork so both the top and bottom edges form
-   straight horizontal lines without changing the row layout. */
 .icon-card img[src$="ayoup.png"] {
-    transform: scaleY(1.021);
+    transform: scale(1.053);
 }
 
 .icon-card img[src$="ayoconvert.png"] {
-    transform: scaleY(1.031);
+    transform: scale(1.063);
 }
 
 .icon-card img[src$="ayoarch.png"] {
-    transform: scaleY(1);
+    transform: scale(1.000);
 }
 
 .icon-card img[src$="ayosort.png"] {
-    transform: scaleY(1.053);
+    transform: scale(1.121);
 }
 
 .icon-card img[src$="ayofolder.png"] {
-    transform: scaleY(1.076);
+    transform: scale(1.158);
 }
 
 .icon-card p {
