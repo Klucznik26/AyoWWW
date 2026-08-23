@@ -1,0 +1,39 @@
+/* Fixed Ayo eyes watermark — intentionally independent from the page scroll. */
+body {
+    isolation: isolate;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("assets/background/ayo-eyes.svg?v=20260823-1");
+    background-repeat: no-repeat;
+    background-position: center 48%;
+    background-size: min(1200px, 92vw) auto;
+    opacity: 0.105;
+    filter: saturate(1.06) drop-shadow(0 0 22px rgba(4, 227, 138, 0.16));
+}
+
+.site-header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 700px) {
+    body::before {
+        background-position: center 43%;
+        background-size: 150vw auto;
+        opacity: 0.075;
+    }
+}
+
+@media (prefers-contrast: more) {
+    body::before {
+        opacity: 0.055;
+    }
+}
