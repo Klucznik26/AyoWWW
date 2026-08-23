@@ -4,46 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ayo Ecosystem — lightweight Linux desktop applications for image workflows and system tools.">
-    <meta name="theme-color" content="#2b231b">
+    <meta name="theme-color" content="#07110d">
     <title>Ayo Ecosystem</title>
     <link rel="icon" type="image/png" href="assets/logo/Ayo.png">
-    <link rel="stylesheet" href="style.css?v=20260823-2">
+    <link rel="stylesheet" href="style.css?v=20260823-3">
 </head>
-<body>
+<body class="feedback-unconfigured">
 <header class="site-header">
     <a class="brand" href="#" aria-label="Ayo Ecosystem">
         <img src="assets/logo/Ayo.png" alt="" aria-hidden="true">
         <span>
             <strong>Ayo Ecosystem</strong>
-            <small>Linux desktop tools</small>
+            <small>Creative Linux desktop tools</small>
         </span>
     </a>
 
-    <div class="language-picker">
-        <button id="language-toggle" class="language-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-            <span id="current-flag" aria-hidden="true">🇵🇱</span>
-            <span class="chevron" aria-hidden="true">▾</span>
+    <div class="header-actions">
+        <button id="header-feedback" class="header-feedback feedback-button" type="button" data-feedback-app="AyoWWW">
+            <span aria-hidden="true">✦</span>
+            <span id="header-feedback-label">Zgłoś uwagę</span>
         </button>
-        <div id="language-panel" class="language-panel" role="menu" hidden></div>
+
+        <div class="language-picker">
+            <button id="language-toggle" class="language-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                <span id="current-flag" aria-hidden="true">🇵🇱</span>
+                <span class="chevron" aria-hidden="true">▾</span>
+            </button>
+            <div id="language-panel" class="language-panel" role="menu" hidden></div>
+        </div>
     </div>
 </header>
 
 <main>
     <section class="hero">
-        <span class="eyebrow">Ayo</span>
+        <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
+        <span class="eyebrow">Ayo · Creative toolkit</span>
         <h1>Ayo Ecosystem</h1>
         <p id="intro-text"></p>
         <div class="hero-meta">
             <span>Linux-first</span>
             <span>Local-first</span>
             <span>Python + Qt</span>
-            <span>49 languages on AyoWWW</span>
+            <span>49 languages</span>
         </div>
     </section>
 
     <section class="projects-section" aria-labelledby="projects-title">
         <div class="section-heading">
-            <h2 id="projects-title"></h2>
+            <div>
+                <span class="section-kicker">Ayo Apps</span>
+                <h2 id="projects-title"></h2>
+            </div>
             <span class="section-count">6</span>
         </div>
         <div id="project-grid" class="project-grid"></div>
@@ -51,7 +63,10 @@
 
     <section class="icon-downloads" aria-labelledby="icons-title">
         <div class="section-heading">
-            <h2 id="icons-title"></h2>
+            <div>
+                <span class="section-kicker">Visual identity</span>
+                <h2 id="icons-title"></h2>
+            </div>
             <span class="section-count">5</span>
         </div>
 
@@ -92,14 +107,63 @@
 
 <footer>
     <span>© Ayo Ecosystem</span>
-    <span id="updated-text"></span>
+    <div class="footer-actions">
+        <button class="footer-feedback feedback-button" type="button" data-feedback-app="AyoWWW">Zgłoś uwagę</button>
+        <span id="updated-text"></span>
+    </div>
 </footer>
+
+<div id="feedback-modal" class="feedback-modal" hidden>
+    <div class="feedback-backdrop" data-feedback-close></div>
+    <section class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+        <button class="feedback-close" type="button" data-feedback-close aria-label="Zamknij">×</button>
+        <span class="feedback-kicker">Ayo Feedback</span>
+        <h2 id="feedback-title">Zgłoś uwagę</h2>
+        <p id="feedback-intro">Znalazłeś błąd, masz pomysł albo pytanie? Wyślij wiadomość bez ujawniania adresu autora strony.</p>
+
+        <form id="feedback-form" novalidate>
+            <input class="feedback-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input id="feedback-subject" type="hidden" name="subject" value="Ayo feedback">
+
+            <label>
+                <span id="feedback-program-label">Program</span>
+                <select id="feedback-program" name="program" required></select>
+            </label>
+
+            <label>
+                <span id="feedback-type-label">Rodzaj zgłoszenia</span>
+                <select id="feedback-type" name="type" required>
+                    <option value="bug">Błąd</option>
+                    <option value="suggestion">Sugestia</option>
+                    <option value="question">Pytanie</option>
+                    <option value="other">Inne</option>
+                </select>
+            </label>
+
+            <label>
+                <span id="feedback-email-label">Twój e-mail (opcjonalnie)</span>
+                <input id="feedback-email" type="email" name="reply_to" autocomplete="email" placeholder="adres do odpowiedzi">
+            </label>
+
+            <label>
+                <span id="feedback-message-label">Wiadomość</span>
+                <textarea id="feedback-message" name="message" rows="7" required maxlength="5000"></textarea>
+            </label>
+
+            <div class="feedback-form-footer">
+                <span id="feedback-status" class="feedback-status" role="status" aria-live="polite"></span>
+                <button id="feedback-submit" class="feedback-submit" type="submit">Wyślij</button>
+            </div>
+        </form>
+    </section>
+</div>
 
 <script src="i18n-1.js?v=20260823-2"></script>
 <script src="i18n-2.js?v=20260823-2"></script>
 <script src="i18n-3.js?v=20260823-2"></script>
 <script src="i18n-4.js?v=20260823-2"></script>
 <script src="i18n-5.js?v=20260823-2"></script>
-<script src="site-core.js?v=20260823-2"></script>
+<script src="feedback-config.js?v=20260823-3"></script>
+<script src="site-core.js?v=20260823-3"></script>
 </body>
 </html>
