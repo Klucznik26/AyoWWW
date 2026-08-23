@@ -9,8 +9,9 @@
     <link rel="icon" type="image/png" href="assets/logo/Ayo.png">
     <link rel="stylesheet" href="style.css?v=20260823-3">
     <link rel="stylesheet" href="eyes.css?v=20260823-3">
+    <link rel="stylesheet" href="feedback.css?v=20260823-1">
 </head>
-<body class="feedback-unconfigured">
+<body>
 <div class="ayo-eyes-bg" aria-hidden="true"></div>
 <header class="site-header">
     <a class="brand" href="#" aria-label="Ayo Ecosystem">
@@ -121,11 +122,11 @@
         <button class="feedback-close" type="button" data-feedback-close aria-label="Zamknij">×</button>
         <span class="feedback-kicker">Ayo Feedback</span>
         <h2 id="feedback-title">Zgłoś uwagę</h2>
-        <p id="feedback-intro">Znalazłeś błąd, masz pomysł albo pytanie? Wyślij wiadomość bez ujawniania adresu autora strony.</p>
+        <p id="feedback-intro">Znalazłeś błąd, masz pomysł albo pytanie? Opisz je tutaj.</p>
+        <p id="feedback-note" class="feedback-note">Zgłoszenie otworzy się jako nowe GitHub Issue. Adres e-mail autora strony nie jest publikowany ani wpisywany w formularzu.</p>
 
         <form id="feedback-form" novalidate>
-            <input class="feedback-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <input id="feedback-subject" type="hidden" name="subject" value="Ayo feedback">
+            <input id="feedback-website" class="feedback-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <label>
                 <span id="feedback-program-label">Program</span>
@@ -143,18 +144,13 @@
             </label>
 
             <label>
-                <span id="feedback-email-label">Twój e-mail (opcjonalnie)</span>
-                <input id="feedback-email" type="email" name="reply_to" autocomplete="email" placeholder="adres do odpowiedzi">
-            </label>
-
-            <label>
                 <span id="feedback-message-label">Wiadomość</span>
                 <textarea id="feedback-message" name="message" rows="7" required maxlength="5000"></textarea>
             </label>
 
             <div class="feedback-form-footer">
                 <span id="feedback-status" class="feedback-status" role="status" aria-live="polite"></span>
-                <button id="feedback-submit" class="feedback-submit" type="submit">Wyślij</button>
+                <button id="feedback-submit" class="feedback-submit" type="submit">Przejdź do wysłania</button>
             </div>
         </form>
     </section>
@@ -165,7 +161,6 @@
 <script src="i18n-3.js?v=20260823-2"></script>
 <script src="i18n-4.js?v=20260823-2"></script>
 <script src="i18n-5.js?v=20260823-2"></script>
-<script src="feedback-config.js?v=20260823-3"></script>
-<script src="site-core.js?v=20260823-3"></script>
+<script src="site-core.js?v=20260823-4"></script>
 </body>
 </html>
