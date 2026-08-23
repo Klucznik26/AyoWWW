@@ -6,6 +6,9 @@ import subprocess
 
 from PIL import Image
 
+# One-off rebuild: restore the known-good source artwork, normalize its visible
+# bounds, and publish fresh asset URLs so browser/CDN caches cannot reuse the
+# previously broken row.
 SOURCE_COMMIT = "dcc7acae09644012b8263295321e24f777539097"
 ICON_DIR = Path("assets/Icons Ayo")
 OUT_DIR = ICON_DIR / "v2"
@@ -38,8 +41,6 @@ def normalize(name: str) -> None:
     width = max(1, round(cropped.width * TARGET_HEIGHT / cropped.height))
     resized = cropped.resize((width, TARGET_HEIGHT), Image.Resampling.LANCZOS)
 
-    # Re-trim any transparent rows introduced by resampling, then resize once
-    # more so every file has exactly the same visible artwork height.
     bbox2 = visible_bbox(resized)
     resized = resized.crop((0, bbox2[1], resized.width, bbox2[3]))
     if resized.height != TARGET_HEIGHT:
