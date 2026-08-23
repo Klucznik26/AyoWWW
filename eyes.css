@@ -1,4 +1,4 @@
-/* Fixed Ayo eyes watermark — intentionally independent from the page scroll. */
+/* Fixed Ayo eyes watermark — independent from page scrolling. */
 body {
     isolation: isolate;
 }
@@ -9,12 +9,12 @@ body::before {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background-image: url("assets/background/ayo-eyes.svg?v=20260823-1");
+    background-image: url("assets/background/ayo-eyes.svg?v=20260823-2");
     background-repeat: no-repeat;
-    background-position: center 48%;
-    background-size: min(1200px, 92vw) auto;
-    opacity: 0.105;
-    filter: saturate(1.06) drop-shadow(0 0 22px rgba(4, 227, 138, 0.16));
+    background-position: center 49%;
+    background-size: min(1280px, 94vw) auto;
+    opacity: 0.16;
+    filter: saturate(1.08) drop-shadow(0 0 24px rgba(4, 227, 138, 0.18));
 }
 
 .site-header,
@@ -26,14 +26,14 @@ footer {
 
 @media (max-width: 700px) {
     body::before {
-        background-position: center 43%;
-        background-size: 150vw auto;
-        opacity: 0.075;
+        background-position: center 44%;
+        background-size: 155vw auto;
+        opacity: 0.11;
     }
 }
 
 @media (prefers-contrast: more) {
     body::before {
-        opacity: 0.055;
+        opacity: 0.08;
     }
 }
