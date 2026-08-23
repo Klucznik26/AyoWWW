@@ -13,14 +13,21 @@
     mix-blend-mode: screen;
 }
 
-/* Keep normal page content above the fixed eyes, but do not override the
-   sticky header's higher z-index from style.css. The previous rule put
-   header and main in the same stacking layer, so transparent main content
-   sat over the opened language menu and intercepted real mouse clicks. */
 main,
 footer {
     position: relative;
     z-index: 1;
+}
+
+/* The language menu visually overlaps main content, so the complete header
+   must live in a higher stacking context. Firefox otherwise hit-tests the
+   visible flags as <main>. These values match the verified browser test. */
+.site-header {
+    z-index: 9999 !important;
+}
+
+.language-panel {
+    z-index: 10000 !important;
 }
 
 @media (max-width: 700px) {
