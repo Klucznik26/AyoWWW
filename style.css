@@ -173,11 +173,9 @@ p {
     text-align: center;
 }
 
-/* All downloadable icons use exactly the same rendered height.
-   Width follows the original aspect ratio and is secondary. */
 .icon-card > a {
     width: 140px;
-    height: 100px;
+    height: 108px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -189,6 +187,30 @@ p {
     max-width: none;
     object-fit: contain;
     display: block;
+    transform-origin: top center;
+}
+
+/* Pixel measurement from the original five-icon row:
+   UP 97 px, CONVERT 96 px, ARCH 99 px, SORT 94 px, FOLDER 92 px.
+   Scale uniformly to a common 99 px visible height. */
+.icon-card img[src$="ayoup.png"] {
+    transform: scale(1.0206);
+}
+
+.icon-card img[src$="ayoconvert.png"] {
+    transform: scale(1.03125);
+}
+
+.icon-card img[src$="ayoarch.png"] {
+    transform: scale(1);
+}
+
+.icon-card img[src$="ayosort.png"] {
+    transform: scale(1.0532);
+}
+
+.icon-card img[src$="ayofolder.png"] {
+    transform: scale(1.0761);
 }
 
 .icon-card p {
